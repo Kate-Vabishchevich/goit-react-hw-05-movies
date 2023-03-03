@@ -12,8 +12,8 @@ const MovieDetails = () => {
     const location = useLocation();
 
     useEffect(() => {
-        getMovieDetails(movieId).then(response => {
-            setMovie({ ...response });
+        getMovieDetails(movieId).then(data => {
+            setMovie(data);
         })
             .catch(error => setError(error));
     }, [movieId])

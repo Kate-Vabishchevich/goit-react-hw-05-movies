@@ -1,6 +1,6 @@
 import React from 'react';
 import noPoster from 'images/noPoster.png';
-import css from './Cast.module.css';
+import css from './CastList.module.css';
 import PropTypes from 'prop-types';
 
 const Cast = ({ cast }) => {

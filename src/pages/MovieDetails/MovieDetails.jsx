@@ -33,8 +33,10 @@ const MovieDetails = () => {
                 </>
             )}
             <Suspense fallback={<div>Loading...</div>}>
-        <Outlet />
-      </Suspense>
+                <Outlet />
+            </Suspense>
         </>
     );
-}
+};
+
+export default MovieDetails;

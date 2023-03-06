@@ -1,0 +1,19 @@
+.movie_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+}
+
+.movie_img {
+    border-radius: 5px;
+        object-fit: cover;
+        filter: drop-shadow(4px 4px 4px rgba(55%, 55%, 55%, 0.6));
+        box-shadow: 0 0 20px rgba(55%, 55%, 55%, 0.5);
+}
+
+.movie__img:hover {
+    transition: 0.5s;
+    box-shadow: 0 0 20px rgba(250, 119, 12, 0.897);
+}

@@ -4,19 +4,22 @@ import css from './MovieCard.module.css';
 import PropTypes from 'prop-types';
 
 const MovieCard = ({
+    movie: {
     poster_path,
     original_title,
     release_date,
     genres,
     vote_average,
     overview,
+    },
 }) => {
     const BASE_IMG_URL = 'https://image.tmdb.org/t/p/w500/';
+    const noPosterImg = noPoster;
     return(
         <div className={css.movie_container}>
             <div className={css.img_container}>
                 <img
-                    src={poster_path !== null ? BASE_IMG_URL + poster_path : noPoster}
+                    src={poster_path !== undefined ? BASE_IMG_URL + poster_path : noPosterImg}
                     className={css.movie_img}
                     alt={original_title}
                 />
@@ -32,7 +35,7 @@ const MovieCard = ({
                 <p className={css.description}>{overview}</p>
                 <h2 className={css.description_name}>Genres</h2>
                 <p className={css.description_name}>
-                    {genres.map(item => item.name).join(' | ')}
+                    {/* {genres.map(genre => genre.name).join(' | ')} */}
                 </p>
             </div>
         </div>

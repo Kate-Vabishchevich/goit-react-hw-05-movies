@@ -35,7 +35,7 @@ const MovieCard = ({
                 <p className={css.description}>{overview}</p>
                 <h2 className={css.description_name}>Genres</h2>
                 <p className={css.description_name}>
-                    {/* {genres.map(genre => genre.name).join(' | ')} */}
+                    {genres.map(genre => genre.name).join(' | ')}
                 </p>
             </div>
         </div>

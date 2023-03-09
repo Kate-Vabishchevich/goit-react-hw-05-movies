@@ -27,17 +27,6 @@ export async function searchMovies(query) {
     }
 }
 
-
-
-// export async function getMovieDetails(movie_id) {
-    
-//     const response = await axios.get(
-//         `${BASE_URL}/movie/${movie_id}?api_key=${API_KEY}`
-//     );
-//     return response.data;
-
-// }
-
 export async function getMovieDetails(movie_id) {
     try {
         const response = await axios.get(

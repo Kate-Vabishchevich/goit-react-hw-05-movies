@@ -9,7 +9,7 @@ import Notiflix from 'notiflix';
 const Movies = () => {
     const [movies, setMovies] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
-    // const [error, setError] = useState(null);
+    // const [error, setError] = usenpm startState(null);
     const [searchParams, setSearchParams] = useSearchParams();
 
     const searchValue = searchParams.get('query') ?? '';
@@ -47,7 +47,7 @@ const Movies = () => {
     return (
         <main>
             <SearchForm onSubmit={onInputSearch} />
-            {isLoading && <Loader />}
+            {/* {isLoading && <Loader />} */}
             {movies && <MovieList movies={movies} />}
         </main>
     )

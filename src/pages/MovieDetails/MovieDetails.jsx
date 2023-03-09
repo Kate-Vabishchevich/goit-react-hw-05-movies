@@ -1,5 +1,5 @@
 import { useState, useEffect, Suspense } from 'react';
-import { useParams, Outlet } from 'react-router-dom';
+import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { getMovieDetails } from 'services/fetchAPI';
 import MovieCard from 'components/MovieCard/MovieCard';
 
@@ -10,6 +10,9 @@ const MovieDetails = () => {
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const { movieId } = useParams();
+    const location = useLocation();
+    const backLinkHref = location.state?.from ?? "/products";
+    console.log(location.state);
     console.log(movieId);
 
     useEffect(() => {
@@ -33,25 +36,18 @@ const MovieDetails = () => {
         fetchData();
     }, [movieId]);
 
-    // useEffect(() => {
-    //     getMovieDetails(movieId).then(response => {
-    //         setMovie({ ...response });
-    //     })
-    //         .catch(error => setError(error));
-    // }, [movieId])
-
     return (
         <>
             {movie && (
                 <>
                     <MovieCard movie={movie} />
-                    {/* <div>
+                    <div>
                         <h2>Additional information</h2>
                         <ul className={css.list}>
                             <li>Cast</li>
                             <li>Reviews</li>
                         </ul>
-                    </div> */}
+                    </div>
                 </>
             )}
             {error && <p>Something went wrong. Please, refresh the page</p>}

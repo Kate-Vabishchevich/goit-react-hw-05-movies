@@ -25,7 +25,6 @@ const MovieList = ({ movies }) => {
             }
             )}
     </ul>
-        
     )
 }
 

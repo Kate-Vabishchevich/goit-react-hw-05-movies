@@ -4,6 +4,7 @@ import { getMovieReviews } from 'services/fetchAPI';
 import CastList from 'components/CastList/CastList';
 import Loader from 'components/Loader/Loader';
 import Notiflix from 'notiflix';
+import ReviewsList from 'components/ReviewsList/ReviewsList';
 
 const Reviews = () => {
   const [movieReviews, setMovieReviews] = useState(null);
@@ -33,7 +34,11 @@ const Reviews = () => {
   return (
     <>
       {isLoading && <Loader />}
-      {/* {movieCast ? <CastList cast={movieCast} /> : <p>No results</p>} */}
+      {movieReviews ? (
+        <ReviewsList review={movieReviews} />
+      ) : (
+        <p>We don't have any reviews for this movie</p>
+      )}
       {error && Notiflix.Notify.failure('Sorry, something wrong')}
     </>
   );

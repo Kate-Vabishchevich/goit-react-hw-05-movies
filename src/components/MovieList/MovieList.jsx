@@ -13,20 +13,26 @@ const MovieList = ({ movies }) => {
     <ul className={css.movie_container}>
       {movies.map(({ poster_path, name, title, id }) => {
         return (
-          <Link key={id} to={`/movies/${id}`} state={{ from: location }}>
-            <li>
-              <img
-                className={css.movie_img}
-                src={
-                  poster_path !== undefined
-                    ? BASE_IMG_URL + poster_path
-                    : noPosterImg
-                }
-                alt={title}
-              />
-              <h2>{title || name}</h2>
-            </li>
-          </Link>
+          <div key={id} className={css.card_wrapper}>
+            <Link
+              to={`/movies/${id}`}
+              state={{ from: location }}
+              className={css.movie_link}
+            >
+              <li className={css.movie_item}>
+                <img
+                  className={css.movie_img}
+                  src={
+                    poster_path !== undefined
+                      ? BASE_IMG_URL + poster_path
+                      : noPosterImg
+                  }
+                  alt={title}
+                />
+                <p className={css.movie_title}>{title || name}</p>
+              </li>
+            </Link>
+          </div>
         );
       })}
     </ul>

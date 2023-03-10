@@ -41,10 +41,18 @@ const MovieDetails = () => {
           <div>
             <h2>Additional information</h2>
             <ul className={css.list}>
-              <Link to="cast" state={{ from: backLinkHref }}>
+              <Link
+                to="cast"
+                state={{ from: backLinkHref }}
+                className={css.movie_link}
+              >
                 <li>Cast</li>
               </Link>
-              <Link to="reviews" state={{ from: backLinkHref }}>
+              <Link
+                to="reviews"
+                state={{ from: backLinkHref }}
+                className={css.movie_link}
+              >
                 <li>Reviews</li>
               </Link>
             </ul>

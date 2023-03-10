@@ -1,0 +1,20 @@
+.search_form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search_input {
+  padding: 8px 32px 8px 8px;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.search_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 40px;
+}

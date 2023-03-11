@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const ReviewsList = ({ review }) => {
   return (
     <>
-      <div className={css.review_name}>Review</div>
+      <div className={css.review_title}>Reviews</div>
       <ul className={css.review_container}>
         {review.map(({ author, id, content }) => {
           return (

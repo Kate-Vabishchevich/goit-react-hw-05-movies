@@ -1,4 +1,17 @@
+.go_back {
+  margin-left: 40px;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.go_back:hover {
+  font-size: 18px;
+  text-decoration: underline;
+  color: rgb(33, 111, 238);
+}
+
 .movie_link {
+  list-style: none;
   text-decoration: none;
 }
 

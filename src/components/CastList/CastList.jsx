@@ -7,7 +7,7 @@ const CastList = ({ cast }) => {
   const BASE_IMG_URL = 'https://image.tmdb.org/t/p/w200';
   return (
     <>
-      <div className={css.cast_name}>Cast</div>
+      <div className={css.cast_title}>Cast</div>
       <ul className={css.cast_list}>
         {cast.map(({ profile_path, cast_id, name, character }) => {
           return (
@@ -19,8 +19,8 @@ const CastList = ({ cast }) => {
                 alt={name}
                 width="200"
               />
-              <p>{name}</p>
-              <p>Character: {character}</p>
+              <p className={css.cast_name}>{name}</p>
+              <p className={css.cast_character}>Character: {character}</p>
             </li>
           );
         })}

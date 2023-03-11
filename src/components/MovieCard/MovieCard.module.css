@@ -1,6 +1,7 @@
 .card_container {
   display: flex;
   gap: 25px;
+  margin-top: 20px;
 }
 
 .card_img {

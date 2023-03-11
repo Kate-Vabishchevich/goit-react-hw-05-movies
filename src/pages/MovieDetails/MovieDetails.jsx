@@ -34,7 +34,9 @@ const MovieDetails = () => {
 
   return (
     <>
-      <Link to={backLinkHref}>Go back</Link>
+      <Link to={backLinkHref} className={css.go_back}>
+        &larr; Go back
+      </Link>
       {movie && (
         <>
           <MovieCard movie={movie} />

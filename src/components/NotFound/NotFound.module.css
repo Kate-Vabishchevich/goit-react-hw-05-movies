@@ -1,0 +1,15 @@
+.pnf {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.link {
+  margin-left: 40px;
+  padding: 8px;
+  text-decoration: none;
+}
+.link:hover {
+  font-size: 18px;
+  text-decoration: underline;
+  color: rgb(33, 111, 238);
+}

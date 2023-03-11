@@ -6,22 +6,26 @@ import PropTypes from 'prop-types';
 const CastList = ({ cast }) => {
   const BASE_IMG_URL = 'https://image.tmdb.org/t/p/w200';
   return (
-    <ul className={css.cast_list}>
-      {cast.map(({ profile_path, cast_id, name, character }) => {
-        return (
-          <li key={cast_id}>
-            <img
-              src={
-                profile_path !== null ? BASE_IMG_URL + profile_path : noPoster
-              }
-              alt={name}
-            />
-            <p>{name}</p>
-            <p>Character: {character}</p>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <div className={css.cast_name}>Cast</div>
+      <ul className={css.cast_list}>
+        {cast.map(({ profile_path, cast_id, name, character }) => {
+          return (
+            <li key={cast_id} className={css.cast_item}>
+              <img
+                src={
+                  profile_path !== null ? BASE_IMG_URL + profile_path : noPoster
+                }
+                alt={name}
+                width="200"
+              />
+              <p>{name}</p>
+              <p>Character: {character}</p>
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
 };
 

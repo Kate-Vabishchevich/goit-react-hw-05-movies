@@ -1,0 +1,46 @@
+.review_name {
+  margin-left: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration-line: underline;
+  color: rgb(67, 68, 126);
+}
+
+.review_container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding: 15px 20px;
+
+  box-sizing: border-box;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review_container > li {
+  margin-top: 5px;
+  margin-left: 0;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-left: 25px;
+  width: 100%;
+  border: 1px solid rgba(58, 56, 56, 0.151);
+}
+
+.review_author {
+  color: rgb(33, 111, 238);
+  font-weight: 700;
+  display: inline-block;
+}
+
+.review_text {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 1.3;
+}

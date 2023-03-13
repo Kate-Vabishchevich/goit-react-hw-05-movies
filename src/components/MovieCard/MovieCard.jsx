@@ -19,9 +19,7 @@ const MovieCard = ({
     <div className={css.card_container}>
       <div>
         <img
-          src={
-            poster_path !== undefined ? BASE_IMG_URL + poster_path : noPosterImg
-          }
+          src={poster_path !== null ? BASE_IMG_URL + poster_path : noPosterImg}
           className={css.card_img}
           alt={original_title}
         />

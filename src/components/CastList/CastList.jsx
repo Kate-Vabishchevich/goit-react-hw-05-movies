@@ -31,13 +31,13 @@ const CastList = ({ cast }) => {
 
 export default CastList;
 
-// Cast.propTypes = {
-// cast: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       profile_path: PropTypes.string,
-//       id: PropTypes.number.isRequired,
-//       name: PropTypes.string.isRequired,
-//       character: PropTypes.string.isRequired,
-//     })
-//   ),
-// }
+CastList.propTypes = {
+  cast: PropTypes.arrayOf(
+    PropTypes.shape({
+      profile_path: PropTypes.string,
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      character: PropTypes.string.isRequired,
+    })
+  ),
+};

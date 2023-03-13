@@ -12,7 +12,6 @@ const Movies = () => {
   const [error, setError] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
-  console.log('movies:', location);
   const searchValue = searchParams.get('query') ?? '';
 
   useEffect(() => {
@@ -23,7 +22,6 @@ const Movies = () => {
       setIsLoading(true);
       try {
         const data = await searchMovies(searchValue);
-        // console.log('data:', data);
         if (data === 0) {
           return;
         }
@@ -42,18 +40,15 @@ const Movies = () => {
   };
 
   return (
-    console.log(searchParams),
-    (
-      <main>
-        <SearchForm onSubmit={onInputSearch} />
-        {isLoading && <Loader />}
-        {movies && <MovieList movies={movies} />}
-        {error &&
-          Notiflix.Notify.failure(
-            'Sorry, we did not find this movie. Please repeat the search'
-          )}
-      </main>
-    )
+    <main>
+      <SearchForm onSubmit={onInputSearch} />
+      {isLoading && <Loader />}
+      {movies && <MovieList movies={movies} />}
+      {error &&
+        Notiflix.Notify.failure(
+          'Sorry, we did not find this movie. Please repeat the search'
+        )}
+    </main>
   );
 };
 

@@ -7,7 +7,6 @@ const SearchForm = ({ onSubmit }) => {
   const [search, setSearch] = useState('');
 
   const onInputChange = e => setSearch(e.target.value);
-  // console.log('e:', e.target.value);
 
   const onSubmitForm = e => {
     e.preventDefault();

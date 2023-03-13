@@ -23,7 +23,7 @@ const MovieList = ({ movies }) => {
                 <img
                   className={css.movie_img}
                   src={
-                    poster_path !== undefined
+                    poster_path !== null
                       ? BASE_IMG_URL + poster_path
                       : noPosterImg
                   }

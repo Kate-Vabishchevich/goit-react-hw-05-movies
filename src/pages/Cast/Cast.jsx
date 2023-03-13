@@ -11,14 +11,12 @@ const Cast = () => {
   const [error, setError] = useState(null);
   const { movieId } = useParams();
   const location = useLocation();
-  console.log('cast:', location);
 
   useEffect(() => {
     const fetchCast = async () => {
       setIsLoading(true);
       try {
         const data = await getMovieCast(movieId);
-        // console.log('dataCast:', data);
         if (data.length === 0) {
           return;
         }

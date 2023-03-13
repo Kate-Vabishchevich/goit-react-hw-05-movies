@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieReviews } from 'services/fetchAPI';
-import CastList from 'components/CastList/CastList';
 import Loader from 'components/Loader/Loader';
 import Notiflix from 'notiflix';
 import ReviewsList from 'components/ReviewsList/ReviewsList';
@@ -17,7 +16,6 @@ const Reviews = () => {
       setIsLoading(true);
       try {
         const data = await getMovieReviews(movieId);
-        console.log('dataReviews:', data);
         if (data.length === 0) {
           return;
         }

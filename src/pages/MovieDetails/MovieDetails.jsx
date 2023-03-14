@@ -61,6 +61,7 @@ const MovieDetails = () => {
         </>
       )}
       {error && <p>Something went wrong. Please, refresh the page</p>}
+      {isLoading && <Loader />}
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>

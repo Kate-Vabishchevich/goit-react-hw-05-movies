@@ -28,6 +28,7 @@ const Home = () => {
 
   return (
     <main>
+      {error && <p>Something went wrong. Please, refresh the page</p>}
       {isLoading && <Loader />}
       {trendingMovies && <MovieList movies={trendingMovies} />}
     </main>
